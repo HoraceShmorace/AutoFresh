@@ -43,8 +43,7 @@ const init = () => {
 }
 
 const startAutoFreshPurchaseFlow = () => {
-  log('\n')
-  log(`Amazon Purchase attempt STARTED...`)
+  log('\nAmazon Purchase attempt STARTED...')
   if (isShipOptionPage) doShipOptionPage()
   else if (isPaySelectPage) doPaySelectPage()
   else if (isPurchasePage) doPurchasePage()
@@ -56,12 +55,12 @@ const doShipOptionPage = () => {
   var availabilityButton = document.querySelector('.ufss-slot-toggle-native-button')
 
   if (!availabilityButton) {
-    log(`Amazon Fresh Purchase attempt FAILED :(`)
+    log('Amazon Fresh Purchase attempt FAILED :(')
     return
   }
 
   const title = 'Amazon Fresh delivery available!'
-  const body = `Found open delivery window!`
+  const body = 'Found open delivery window!'
   doNotification(title, body)
 
   setTimeout(() => availabilityButton.click(), 100)
