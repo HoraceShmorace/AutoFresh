@@ -1,9 +1,4 @@
-const ENABLE_EXTENSION_KEY = 'enable-extension'
-const ALLOW_AUTO_BUY_KEY = 'allow-auto-buy'
-const INTERVAL_SECONDS_KEY = 'interval-seconds'
 const DEBUG = true
-const CHECKOUT_URL = 'https://www.amazon.com/gp/buy/shipoptionselect/handlers/display.html?hasWorkingJavascript=1'
-const NOOP = _ => _
 
 const { pathname } = location
 const isShipOptionPage = /buy\/shipoptionselect/.test(pathname)
