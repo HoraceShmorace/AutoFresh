@@ -55,7 +55,7 @@ const doShipOptionPage = () => {
   var availabilityButton = document.querySelector('.ufss-slot-toggle-native-button')
 
   if (!availabilityButton) {
-    log('Amazon Fresh Purchase attempt FAILED :(')
+    log('Amazon Fresh Purchase attempt UNSUCCESSFUL :(')
     return
   }
 
