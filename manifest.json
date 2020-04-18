@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "AutoFresh",
+    "description": "A Chrome extension that will reload the Amazon Fresh checkout page until there is an available delivery window, and then automatically goes through the entire checkout flow, optionally purchasing the cart.",
+    "version": "0.1.0",
+    "author": "@HoraceShmorace",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_title": "AutoFresh",
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.amazon.com/gp/buy/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    },
+    "permissions": ["storage","activeTab","declarativeContent"]
+}

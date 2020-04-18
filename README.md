@@ -1,0 +1,2 @@
+# AutoFresh
+A Chrome extension that will reload the Amazon Fresh checkout page until there is an available delivery window, and then automatically goes through the entire checkout flow, optionally purchasing the cart.
